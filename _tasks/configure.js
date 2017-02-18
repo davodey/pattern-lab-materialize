@@ -2,7 +2,7 @@
 var gulp = require('gulp');
 
 // Copies the assetts from the pearson elements library and brings them into UI / Pattern Lab.
-gulp.task('configure', ['install-elements'], function() {
+gulp.task('configure', function() {
     gulp.src("patternlab-config.json")
         .pipe(gulp.dest('node_modules/edition-node-gulp/'));
 
