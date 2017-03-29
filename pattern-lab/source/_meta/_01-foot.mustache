@@ -14,6 +14,8 @@
               $('.tapTarget').tapTarget('open');
           }
 
+
+
           console.log('shit');
           $('select').material_select();
           $('.datepicker').pickadate({
@@ -46,6 +48,10 @@
 
           $('.tooltipped').tooltip({delay: 50});
           $('.slider').slider();
+
+          $('#scale-demo-trigger').click(function(){
+              $('.scale-transition').toggleClass('scale-out');
+          })
 
       });
   </script>
