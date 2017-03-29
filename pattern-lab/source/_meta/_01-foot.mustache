@@ -1,7 +1,53 @@
   
   <!--DO NOT REMOVE-->
   {{{ patternLabFoot }}}
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="../../js/materialize.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../../js/materialize.min.js"></script>
+  <script>
+      $(document).ready(function() {
+          function toastContent() {
+              var $toastContent = $('<span>I am toast content</span>');
+              Materialize.toast($toastContent, 5000);
+          }
+
+          function featureDiscover(){
+              $('.tapTarget').tapTarget('open');
+          }
+
+          console.log('shit');
+          $('select').material_select();
+          $('.datepicker').pickadate({
+              selectMonths: true, // Creates a dropdown to control month
+              selectYears: 15 // Creates a dropdown of 15 years to control year
+          });
+          $('input#input_text, textarea#textarea1').characterCounter();
+          $('input.autocomplete').autocomplete({
+              data: {
+                  "Apple": null,
+                  "Microsoft": null,
+                  "Google": 'http://placehold.it/250x250'
+              },
+              limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
+          });
+          $(".dropdown-button").dropdown();
+          $(".button-collapse").sideNav();
+          $('.normal').carousel();
+          $('.collapsible').collapsible();
+          $('.popout').collapsible();
+          $('.expandable').collapsible();
+          $('.carousel.carousel-slider').carousel({fullWidth: true});
+          $('#toastBtn').click(function(){
+              toastContent();
+          });
+
+          $('.tap-btn').click(function(){
+              featureDiscover();
+          });
+
+          $('.tooltipped').tooltip({delay: 50});
+          $('.slider').slider();
+
+      });
+  </script>
   </body>
 </html>
